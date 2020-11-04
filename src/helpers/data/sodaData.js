@@ -21,6 +21,9 @@ const getSodas = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const updateSodaQuantity = (sodaId, updatedSoda) => axios.put(`${baseUrl}/${sodaId}.json`, updatedSoda);
+
 export default {
   getSodas,
+  updateSodaQuantity,
 };

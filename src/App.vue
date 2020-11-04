@@ -1,20 +1,25 @@
 <template>
-<div id="app">
-    <h1>Eduity Fancy Soda Machine!</h1>
-    <p>3 Quarters per soda!</p>
-    <p>Number of Quarters: {{ quarters }}</p>
+  <div id="app">
 
-    <button @click="addQuarter"> + ADD QUARTER</button>
-    <button @click="ejectQuarters">EJECT QUARTERS</button>
+    <img src="./assets/eduity-logo.png" alt="eduity-logo">
+    <h1>Eduity Fancy Soda Machine!</h1>
+    <p><strong>3 Quarters per soda!</strong></p>
+    <p><strong>Number of Quarters: {{ quarters }}</strong></p>
+
+    <button class="btn btn-outline-success" @click="addQuarter"> + ADD QUARTER</button>
+    <button class="btn btn-outline-danger" @click="ejectQuarters">EJECT QUARTER(S)</button>
+
+    <h3>Sodas</h3>
+
     <ul>
-      <li class="list-group-item"><button v-for="soda in sodas" :key="soda.id" @click="dispenseSoda(soda.id, soda.name, soda.quantity)">{{ soda.name }}</button></li>
+      <li><button class="btn btn-outline-secondary" v-for="soda in sodas" :key="soda.id" @click="dispenseSoda(soda.id, soda.name, soda.quantity)">{{ soda.name }}</button></li>
     </ul>
+
   </div>
 </template>
 
 <script>
 import sodaData from './helpers/data/sodaData.js';
-
 
 export default {
   name: 'App',
@@ -74,17 +79,26 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh; /* will cover the 100% of viewport */
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 30px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  background-color: antiquewhite;
+}
+h3 {
+  margin-top: 15px;
 }
 button {
   margin: 5px;
 }
 ul {
   list-style-type: none;
+}
+img {
+  max-height: 100px;
+  max-width: 100px;
 }
 </style>

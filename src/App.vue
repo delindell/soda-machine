@@ -1,15 +1,43 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+    <h1>Eduity Fancy Soda Machine!</h1>
+    <p>75 cents per soda! (Only Accepts Quarters)</p>
+    <p>Number of Quarter {{ quarters }}</p>
+
+    <button @click="addQuarter"> + ADD QUARTER</button>
+    <button @click="ejectQuarters">EJECT QUARTERS</button>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import sodaData from './helpers/data/sodaData.js';
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      quarters: 0,
+      sodas: []
+    }
+  },
+  methods: {
+    addQuarter() {
+      this.quarters ++
+    },
+    ejectQuarters() {
+      this.quarters = 0
+    },
+    getTheSodas() {
+      sodaData.getSodas()
+        .then((results) => { this.sodas = results })
+        .catch((err) => console.error('error getting sodas', err));
+    }
+  },
+  mounted() {
+    this.getTheSodas();
+    console.log('mounted');
   }
 }
 </script>

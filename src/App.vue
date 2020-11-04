@@ -1,12 +1,14 @@
 <template>
 <div id="app">
     <h1>Eduity Fancy Soda Machine!</h1>
-    <p>75 cents per soda! (Only Accepts Quarters)</p>
-    <p>Number of Quarter {{ quarters }}</p>
+    <p>3 Quarters per soda!</p>
+    <p>Number of Quarters: {{ quarters }}</p>
 
     <button @click="addQuarter"> + ADD QUARTER</button>
     <button @click="ejectQuarters">EJECT QUARTERS</button>
-
+    <ul>
+      <li class="list-group-item"><button v-for="soda in sodas" :key="soda.id" @click="dispenseSoda(soda.id, soda.name, soda.quantity)">{{ soda.name }}</button></li>
+    </ul>
   </div>
 </template>
 
@@ -29,17 +31,45 @@ export default {
     ejectQuarters() {
       this.quarters = 0
     },
+    dispenseSoda(sodaId, sodaName, sodaQuantity) {
+      if (sodaQuantity === 0) {
+        alert(`${sodaName} is sold out!`)
+      }
+      else if (this.quarters === 3 && sodaQuantity >= 1) {
+        this.quarters = 0;
+        const newSodaAmount = sodaQuantity - 1;
+        alert(`Enjoy your ${sodaName}!`);
+        const updatedSoda = {
+          name: sodaName,
+          quantity: newSodaAmount
+        };
+        sodaData.updateSodaQuantity(sodaId, updatedSoda);
+      }
+      else if (this.quarters < 3 && sodaQuantity >= 1) {
+        alert('Insert more quarters!');
+      }
+      else if (this.quarters > 3 && sodaQuantity >= 1) {
+        this.quarters = this.quarters - 3;
+        const newSodaAmount = sodaQuantity - 1;
+        console.log(newSodaAmount);
+        alert(`Enjoy your ${sodaName}!`);
+        const updatedSoda = {
+          name: sodaName,
+          quantity: newSodaAmount
+        };
+        sodaData.updateSodaQuantity(sodaId, updatedSoda);
+      }
+    },
     getTheSodas() {
       sodaData.getSodas()
-        .then((results) => { this.sodas = results })
+        .then((data) => { this.sodas = data })
         .catch((err) => console.error('error getting sodas', err));
-    }
+    },
   },
   mounted() {
     this.getTheSodas();
-    console.log('mounted');
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -50,5 +80,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+button {
+  margin: 5px;
+}
+ul {
+  list-style-type: none;
 }
 </style>

@@ -6,7 +6,9 @@
 
     <button @click="addQuarter"> + ADD QUARTER</button>
     <button @click="ejectQuarters">EJECT QUARTERS</button>
-
+    <ul>
+      <li class="list-group-item" v-for="soda in sodas" :key="soda.id"><button>{{ soda.name }}</button></li>
+    </ul>
   </div>
 </template>
 
@@ -33,7 +35,7 @@ export default {
       sodaData.getSodas()
         .then((results) => { this.sodas = results })
         .catch((err) => console.error('error getting sodas', err));
-    }
+    },
   },
   mounted() {
     this.getTheSodas();
@@ -50,5 +52,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+button {
+  margin: 5px;
 }
 </style>

@@ -38,7 +38,6 @@ export default {
       else if (this.quarters === 3 && sodaQuantity >= 1) {
         this.quarters = 0;
         const newSodaAmount = sodaQuantity - 1;
-        console.log(newSodaAmount);
         alert(`Enjoy your ${sodaName}!`);
         const updatedSoda = {
           name: sodaName,
@@ -63,15 +62,14 @@ export default {
     },
     getTheSodas() {
       sodaData.getSodas()
-        .then((results) => { this.sodas = results })
+        .then((data) => { this.sodas = data })
         .catch((err) => console.error('error getting sodas', err));
     },
   },
   mounted() {
     this.getTheSodas();
-    console.log('mounted');
-  }
-}
+  },
+};
 </script>
 
 <style>

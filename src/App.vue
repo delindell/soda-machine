@@ -28,12 +28,15 @@ export default {
     },
     ejectQuarters() {
       this.quarters = 0
+    },
+    getTheSodas() {
+      sodaData.getSodas()
+        .then((results) => { this.sodas = results })
+        .catch((err) => console.error('error getting sodas', err));
     }
   },
   mounted() {
-    sodaData.getSodas()
-      .then((results) => { this.sodas = results })
-      .catch((err) => console.error('error getting sodas', err));
+    this.getTheSodas();
     console.log('mounted');
   }
 }

@@ -15,7 +15,7 @@ The user must input 3 quarters into the machine in order to be able to choose a 
 1. If you do not have npm http-server installed, follow the instructions [HERE](https://www.npmjs.com/package/http-server)
 1. Clone down this repo to a directory on your local computer
 1. `cd` into the repo and run `npm install` in your terminal to install all dependencies
-1. Create a new Firebase Project [CLICK HERE](firebase.com)
+1. Create a new Firebase Project [CLICK HERE](https://www.firebase.com)
 1. In the `src/helpers` directory of the project, create an `apiKeys.json` file. Reference the `apiKeysExample.json` file located in the same directory, and enter the 
 Firebase keys that were created when you made the project. Make sure this file is structured correctly (pay close attention to the example provided).
 1. Go back to the Firebase project you made and navigate to the data tab, under the Realtime Database. Here click on the three dots in the upper right hand corner and load

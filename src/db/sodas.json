@@ -1,62 +1,42 @@
 {
   "soda1": {
     "name": "Coke",
-    "quantity": 10,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 10
   },
   "soda2": {
     "name": "Diet Coke",
-    "quantity": 3,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 3
   },
   "soda3": {
     "name": "Sprite",
-    "quantity": 10,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 10
   },
   "soda4": {
     "name": "Dr. Pepper",
-    "quantity": 10,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 10
   },
   "soda5": {
     "name": "Root Beer",
-    "quantity": 1,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 0
   },
   "soda6": {
     "name": "Orange Fanta",
-    "quantity": 3,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 3
   },
   "soda7": {
     "name": "Grape Fanta",
-    "quantity": 4,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 4
   },
   "soda8": {
     "name": "Mountain Dew",
-    "quantity": 4,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 4
   },
   "soda9": {
     "name": "Bottle Water",
-    "quantity": 10,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 10
   },
   "soda10": {
     "name": "Yellow Gatorade",
-    "quantity": 7,
-    "amountSold": 1,
-    "quartersCollected": 3
+    "quantity": 7
   }
 }

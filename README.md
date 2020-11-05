@@ -4,7 +4,7 @@
 
 This project is a code challenge for Eduity to test my technical knowledge of computer programming and coding.
 I was tasked with building a soda dispenser program that would allow users to input quarters and pick the soda of their choosing,
-while lowering the quantity of sodas in the machine as they are sold. This project uses the Vue. J's framework, which was totally unfamiliar
+while lowering the quantity of sodas in the machine as they are sold. This project uses the Vue.js framework, which was totally unfamiliar
 to me. I am quite proud of what I was able to accomplish in a short amount of time with this new technology and I really enjoyed working with it.
 
 ## Features

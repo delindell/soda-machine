@@ -37,8 +37,8 @@ the premade data into the database located at `src/db/sodas.json`
 * JavaScript
 * Vue.js
 * Firebase
-... Realtime Database for data storage
-... Authentication via Google
+  - Realtime Database for data storage
+  - Authentication via Google
 * Bootstrap 4
 * Axios
 

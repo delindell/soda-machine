@@ -1,13 +1,13 @@
 # Eduity Soda Machine
 
-## Description
+## Description:
 
 This project is a code challenge for Eduity to test my technical knowledge of computer programming and coding.
 I was tasked with building a soda dispenser program that would allow users to input quarters and pick the soda of their choosing,
 while lowering the quantity of sodas in the machine as they are sold. This project uses the Vue.js framework, which was totally unfamiliar
 to me. I am quite proud of what I was able to accomplish in a short amount of time with this new technology and I really enjoyed working with it.
 
-## Features
+## Features:
 
 The user must input 3 quarters into the machine in order to be able to choose a soda. If not enough quarters are imported they will receive a message stating more quarters are needed. Inversely, if too many quarters are inserted they will receive their selected soda (as long as it is not sold out) and they can choose to either eject the remaining quarters or add more to make another purchase. In addition, if the user decides they would no longer like to make a purchase they can press and eject button and get their quarters back. If a soda is sold out, the user will be politely told to make another selection, as that soda is not currently available. 
 
@@ -22,7 +22,7 @@ Firebase keys that were created when you made the project. Make sure this file i
 the premade data into the database located at `src/db/sodas.json`
 1. In your terminal, type `npm start` and your browser should automatically open to `localhost:8080` and you are free to drink all the sodas until you can no longer sleep
 
-## Testing Exercises
+## Testing Exercises:
 
 1. Press the `ADD QUARTER` button and see the number of quarters automatically being updated on the screen, then press the `EJECT QUARTER (S)` button to see the quarters in the machine go back to zero.
 1. Add three quarters to the machine and press 'Root Beer'. This should return a message letting you know it is sold out, however, notice your quarters will still be there in the machine.

@@ -1,5 +1,7 @@
 # Eduity Soda Machine
 
+[DEPLOYED LIVE APP](https://soda-machine-af822.web.app/)
+
 ## Description:
 
 This project is a code challenge for Eduity to test my technical knowledge of computer programming and coding.
